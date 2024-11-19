@@ -65,7 +65,7 @@ def semantic_router(query):
             distances.append (cosine_distances(query_embedding, reference_embedding))
 
 
-        # Aggregate the distances (take the average)
+        # Aggregate the distances (take the average or min)
         min_distance = np.min(distances)
         #print(average_distance)
         # Check against the threshold
