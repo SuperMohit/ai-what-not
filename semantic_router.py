@@ -80,7 +80,7 @@ def semantic_router(query):
         return None
 
     # Sort the routes based on priority and average distance
-    route_scores.sort(key=lambda x: (x['priority'], x['min_distance']))
+    route_scores.sort(key=lambda x: (x['min_distance'], x['priority']))
 
     return route_scores[0]
 
